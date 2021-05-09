@@ -1,5 +1,5 @@
 import Header from './components/Header'
-function App(props) {
+function App() {
   return (
     <div className="container">
       <Header />
