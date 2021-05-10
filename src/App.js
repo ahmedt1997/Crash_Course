@@ -3,8 +3,7 @@ import {useState} from 'react'
 import Task from './components/Tasks'
 function App() {
 
-  // 1 definir la fonction 
-
+ 
 
   const [tasks,setTasks] = useState([
         {
@@ -37,9 +36,16 @@ function App() {
     
         }           
        ])
+        // 1 definir la fonction 
+
        const deleteTask = (id) => {
         // console.log(id)
         setTasks(tasks.filter((task) => task.id !== id))
+      }
+
+      const ontoggle = (id) => {
+        setTasks(tasks.map((task) => 
+        task.id === id ? {...task,reminder:!task.reminder} : task))
       }
     
 
@@ -48,7 +54,7 @@ function App() {
     <div className="container">
       <Header/>
       {/* 2 mettre le fonction en propos */}
-      {tasks.length > 0 ? <Task tasks={tasks} onDelete={deleteTask} /> : 'Nothing to show'}
+      {tasks.length > 0 ? <Task tasks={tasks} onDelete={deleteTask} ontogglediv={ontoggle} /> : 'Nothing to show'}
       
     </div>
   );
