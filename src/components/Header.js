@@ -10,7 +10,7 @@ const Header = ({title}) => {
         <header className='header'>
            <h1>{title}</h1> 
            <Button color='green' text='add' onClick={onclick} />
-           <Task />
+           {/* <Task /> */}
         </header>
     );
 }
