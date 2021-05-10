@@ -1,13 +1,16 @@
 import Button from './Button'
+import Task from './Task'
 
 const Header = ({title}) => {
-    const onclick= () => {
-        console.log('clicked')
+    const onclick = () => {
+        console.log('cliked')
     }
+   
     return (
         <header className='header'>
            <h1>{title}</h1> 
-           <Button color='green' text='add' />
+           <Button color='green' text='add' onClick={onclick} />
+           <Task />
         </header>
     );
 }
