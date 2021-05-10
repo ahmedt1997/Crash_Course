@@ -1,5 +1,5 @@
 import Button from './Button'
-import Task from './Task'
+import Task from './Tasks'
 
 const Header = ({title}) => {
     const onclick = () => {
