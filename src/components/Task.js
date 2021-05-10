@@ -1,9 +1,9 @@
-
+import {FaTimes} from 'react-icons/fa'
 
 const Task = ({task}) => {
     return (
         <div className='task'> 
-            <h1>{task.text}</h1>
+            <h3>{task.text} <FaTimes /></h3>
             <p>{task.day}</p>
         </div>
     );
